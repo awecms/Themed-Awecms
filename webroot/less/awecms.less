@@ -1,0 +1,240 @@
+@border-color: #ccc;
+@footer-height: 20px;
+@footer-padding: 20px;
+
+html,
+body {
+	height: 100%;
+}
+
+b,
+strong,
+.strong {
+	font-weight: normal;
+	font-family: OpenSansSemibold, sans-serif;
+}
+
+i,
+em,
+.em {
+	font-style: normal;
+	font-family: OpenSansItalic, sans-serif;
+}
+
+i b, em b, .em b,
+b i, b em, b .em,
+i.strong, em.strong,
+b.em, strong.em, .strong.em,
+i strong, em strong, .em strong,
+strong i, strong em, strong .em,
+i .strong, em .strong, .em .strong,
+.strong i, .strong em, .strong .em {
+	font-weight: normal;
+	font-style: normal;
+	font-family: OpenSansSemiboldItalic, sans-serif;
+}
+
+legend {
+	font-size: @baseFontSize * 1.75;
+	padding-bottom: (@baseLineHeight / 2);
+}
+
+#main {
+	padding-top: 40px;
+}
+
+body.auth #main {
+	padding-top: 60px;
+}
+
+body.auth #login {
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+body.auth #login form,
+body.auth #login .form-actions {
+	margin-bottom: 0;
+}
+
+#push {
+	height: @footer-height + @footer-padding + @footer-padding + 1;
+}
+
+#footer {
+	padding: @footer-padding;
+	height: @footer-height;
+	text-align: right;
+	font-size: 11px;
+	text-shadow: 0 1px 0 @white;
+	
+	a {
+		color: @grayDark;
+	}
+}
+
+[class*="span"]:first-child {
+	//margin-left: 0;
+}
+
+#content {
+	width: auto;
+	margin-left: 200px;
+	border-left: 1px solid @grayLight;
+	border-bottom: 1px solid @grayLight;
+	background-color: @white;
+	padding-bottom: 20px;
+}
+
+.actions {
+	padding-top: 40px;
+}
+
+#sidebar {
+	position: fixed;
+	float: left;
+	left: 1px;
+	z-index: 10;
+	width: 200px;
+}
+
+h1 {
+	margin: 20px 0;
+}
+
+.widget {
+	position: relative;
+	border: 1px solid @grayDark;
+	margin-bottom: 20px;
+	overflow: hidden;
+	//border-radius: 0 5px 0 5px;
+	
+	.widget-title {
+		padding: 10px;
+		color: @white;
+		background-color: @grayDark;
+		
+		h2 {
+			font-size: 20px;
+			line-height: 20px;
+			margin: 0;
+			padding-right: 40px;
+		}
+		
+		a {
+			color: @white;
+		}
+		
+		a:hover {
+			color: @white;
+			text-decoration: none;
+		}
+		
+		.widget-controls {
+			display: none; // hide them because they don't do anything yet
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+	}
+	
+	.widget-content {
+		padding: 10px;
+		
+		h3 {
+			font-family: OpenSansSemibold, sans-serif;
+			font-size: 18px;
+			line-height: 20px;
+		}
+		
+		h4 {
+			font-size: 16px;
+		}
+	}
+}
+
+td.actions {
+	padding: 4px;
+}
+
+.nav-sidebar {
+	> li.active {
+		border-top: 1px solid @grayLight;
+		border-bottom: 1px solid @grayLight;
+		background-color: @white;
+	}
+	
+	> li.active:first-child {
+		border-top: 0;
+	}
+	
+	a {
+		padding: 10px;
+		color: @grayLightish;
+		text-shadow: 0 1px 0 @white;
+	}
+	
+	li.active > a {
+		color: @gray;
+	}
+	
+	a:hover {
+		color: @gray;
+	}
+	
+	.submenu > .nav {
+		display: none;
+		margin-bottom: 0;
+		
+		> li > a {
+			padding-left: 30px;
+		}
+	}
+	
+	.submenu.active > .nav {
+		display: block;
+	}
+}
+
+#actions {
+	position: fixed;
+	top: @navbarHeight;
+	left: 200px;
+	padding: 10px 20px;
+	background-color: @grayLightish;
+	color: @white;
+	line-height: 21px;
+	height: 21px;
+	z-index: 20;
+	
+	h1 {
+		display: inline-block;
+		margin: 0 10px 0 0;
+		border-right: 1px solid @white;
+		padding-right: 10px;
+		font-size: 18px;
+		line-height: 20px;
+	}
+}
+
+.nav-actions {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	line-height: 20px;
+	
+	li {
+		display: inline-block;
+		margin-right: 10px;
+	}
+	
+	a {
+		color: @white;
+		font-size: 14px;
+	}
+}
+
+.pagination-counter {
+	font-size: 85%;
+	padding-left: 10px;
+}

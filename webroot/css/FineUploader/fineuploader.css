@@ -1,0 +1,121 @@
+/*
+ * Original version: 1.0 © 2010 Andrew Valums ( andrew(at)valums.com )
+ * Current Maintainer (2.0+): 2012, Ray Nicholus ( fineuploader(at)garstasio.com )
+ *
+ * Licensed under MIT license, GNU GPL 2 or later, GNU LGPL 2 or later, see license.txt.
+ */
+ 
+ .uploader-button {
+	margin: 10px 0 0 0;
+	padding: 0;
+	font-weight: normal;
+ }
+ 
+.uploader input[type="text"] {
+	display: none;
+}
+ 
+.qq-uploader {
+    position: relative;
+	display: inline-block;
+    width: auto;
+	margin: 0;
+	padding: 0;
+}
+.qq-upload-button {
+    display: inline-block;
+}
+.qq-upload-drop-area, .qq-upload-extra-drop-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 30px;
+    z-index: 2;
+}
+.qq-upload-drop-area span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -8px;
+}
+.qq-upload-extra-drop-area {
+    position: relative;
+    margin-top: 50px;
+    padding-top: 30px;
+    height: 20px;
+    min-height: 40px;
+}
+
+.qq-upload-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.qq-upload-list li {
+    margin: 0;
+    padding: 9px;
+}
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-retry, .qq-upload-failed-text, .qq-upload-finished {
+    margin-right: 12px;
+}
+
+.qq-upload-spinner {
+    display: inline-block;
+    background: url("loading.gif");
+    width: 15px;
+    height: 15px;
+}
+.qq-drop-processing {
+    display: none;
+}
+.qq-drop-processing-spinner {
+    display: inline-block;
+    background: url("processing.gif");
+    width: 24px;
+    height: 24px;
+}
+.qq-upload-finished {
+    display:none;
+    width:15px;
+    height:15px;
+}
+.qq-upload-retry {
+    display: none;
+}
+.qq-upload-retryable .qq-upload-retry {
+    display: inline;
+}
+.qq-upload-failed-text {
+    display: none;
+}
+.qq-upload-failed-icon {
+    display:none;
+    width:15px;
+    height:15px;
+}
+.qq-upload-fail .qq-upload-failed-text {
+    display: inline;
+}
+.qq-upload-retrying .qq-upload-failed-text {
+    display: inline;
+}
+.qq-progress-bar {
+    width: 0%;
+    height: 15px;
+    border-radius: 6px;
+    margin-bottom: 3px;
+    display: none;
+}
+
+.alert-success .progress {
+	display: none;
+}
+
+.qq-uploader .remove, .uploader-file .remove {
+	text-decoration: none;
+	font-weight: normal;
+	margin-left: 10px;
+}

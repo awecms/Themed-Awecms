@@ -1,0 +1,215 @@
+/* Cake Bake Compatibility */
+
+.legacy {
+	
+	&#content {
+		padding-top: 40px;
+		overflow: auto;
+	}
+	
+	// Make the first h2 the same size as h1
+	.index > h2:first-child {
+		font-size: 38.5px;
+		margin: 20px 0;
+	}
+	
+	.index > table {
+		.table;
+		.table-hover;
+		
+		// thead emulation
+		tr:first-child th {
+			vertical-align: bottom;
+			border-top: 0;
+		}
+		
+		tr:first-child:hover th {
+			background-color: transparent;
+		}
+		
+		// Table striping
+		tbody {
+			> tr:nth-child(even) > td,
+			> tr:nth-child(even) > th {
+				background-color: @tableBackgroundAccent;
+			}
+		}
+		
+		// Style action buttons
+		.actions {
+			padding: 5px;
+			
+			a {
+				.btn;
+				.btn-small;
+				background-image: none;
+			}
+			
+			a[href*="/delete/"],
+			form[action*="/delete/"] + a{
+				.btn-danger;
+				background-image: none;
+			}
+		}
+	}
+	
+	.index > table + p {
+		margin-left: 10px;
+		font-size: 12px;
+	}
+	
+	div.actions {
+		.row-fluid;
+		position: fixed;
+		top: @navbarHeight;
+		left: 200px;
+		padding: 10px 20px;
+		background-color: @grayLightish;
+		color: @white;
+		line-height: 21px;
+		height: 21px;
+		z-index: 20;
+		
+		h3 {
+			display: inline-block;
+			margin: 0 10px 0 0;
+			border-right: 1px solid @white;
+			padding-right: 10px;
+			font-size: 18px;
+			line-height: 20px;
+		}
+		
+		ul {
+			list-style-type: none;
+			display: inline-block;
+			margin: 0;
+			line-height: 20px;
+		}
+		
+		li {
+			display: inline-block;
+			margin-right: 10px;
+		}
+		
+		a {
+			color: @white;
+			font-size: 14px;
+		}
+	}
+	
+	.paging {
+		margin: 10px 0 0 10px;
+		// Allow for text-based alignment
+		display: inline-block;
+		.ie7-inline-block();
+		// Visuals
+		.border-radius(@baseBorderRadius);
+		.box-shadow(0 1px 2px rgba(0,0,0,.05));
+	}
+	
+	.paging .prev a, .paging .next a,
+	.paging .disabled.prev, .paging .disabled.next {
+		position: relative;
+		width: 0.5em;
+		text-indent: -99em;
+		
+		&:after {
+			content: '«';
+			display: inline-block;
+			position: absolute;
+			left: 12px;
+			text-indent: 0;
+		}
+	}
+	
+	.paging .next a:after,
+	.paging .disabled.next:after {
+		content: '»';
+	}
+	
+	.paging span {
+		float: left; // Collapse white-space
+		line-height: @baseLineHeight;
+		text-decoration: none;
+		background-color: @paginationBackground;
+		border: 1px solid @paginationBorder;
+		border-left-width: 0;
+	}
+	
+	.paging a,
+	.paging span.current,
+	.paging span.disabled {
+		padding: 4px 12px;
+		display: inline-block;
+		.ie7-inline-block();
+	}
+	
+	.paging a:hover,
+	.paging a:focus,
+	.paging .current a,
+	.paging span.current {
+		background-color: @paginationActiveBackground;
+		text-decoration: none;
+	}
+	
+	.paging .current a,
+	.paging span.current {
+		color: @grayLight;
+		cursor: default;
+	}
+	
+	.paging span.disabled,
+	.paging span.disable a,
+	.paging span.disable a:hover,
+	.paging span.disable a:focus {
+		color: @grayLight;
+		background-color: transparent;
+		cursor: default;
+	}
+	
+	.paging span:first-child {
+		border-left-width: 1px;
+		.border-left-radius(@baseBorderRadius);
+	}
+	
+	.paging span:last-child {
+		.border-right-radius(@baseBorderRadius);
+	}
+	
+	.form form {
+		.form-horizontal;
+	}
+	
+	.form legend {
+		padding-top: (@baseLineHeight / 2);
+		font-family: @headingsFontFamily;
+		font-size: @baseFontSize * 2.25;
+		line-height: @baseLineHeight * 2;
+	}
+	
+	div.submit {
+		.form-actions;
+		.form-horizontal .form-actions;
+		
+		[type="submit"] {
+			.btn-primary;
+		}
+	}
+}
+
+.cake-error {
+	.alert;
+	.alert-error;
+	
+	a {
+		color: @errorText;
+		text-decoration: underline;
+	}
+}
+
+.stack-trace,
+.cake-context,
+.cake-code-dump {
+	.pre-scrollable;
+	background-color: @white;
+}
