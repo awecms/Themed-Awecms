@@ -3,7 +3,7 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo __(Configure::read('Admin.website_name')); ?>:
+		<?php echo __(Configure::read('Awecms.websiteName')); ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
@@ -20,7 +20,7 @@
 	<header id="header" class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-				<?php echo $this->Html->link(__(Configure::read('Admin.design_company')), array('admin' => true, 'plugin' => 'awecms', 'controller' => 'pages', 'action' => 'display', 'home'), array('class' => 'brand')); ?>
+				<?php echo $this->Html->link(__(Configure::read('Awecms.designCompany')), array('admin' => true, 'plugin' => 'awecms', 'controller' => 'pages', 'action' => 'display', 'home'), array('class' => 'brand')); ?>
 			</div>
 		</div>
 	</header>
