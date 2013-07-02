@@ -23,21 +23,52 @@
 				<?php
 					echo $this->Html->link(
 							__(Configure::read('Awecms.designCompany')),
-							array('admin' => true, 'plugin' => 'awecms', 'controller' => 'static_pages', 'action' => 'plugin_display', 'awecms', 'home'),
+							array('admin' => true,
+								'plugin' => 'awecms',
+								'controller' => 'static_pages',
+								'action' => 'plugin_display',
+								'awecms',
+								'home'
+							),
 							array('class' => 'brand')
 						);
 				?>
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="#"><span class="icon-arrow-down"></span></a>
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="#">
+					<span class="icon-arrow-down"></span>
+				</a>
 				<ul class="nav pull-right">
 					<li><?php echo $this->Html->link(__(Configure::read('Awecms.websiteName')), '/'); ?></li>
 					<li class="divider-vertical"></li>
-					<li><?php echo $this->Html->link(__('Help'), '#'); ?></li>
+					<li>
+						<?php
+							echo $this->Html->link(
+								__d('awecms', 'Help'),
+								'http://awecms.com/static/help',
+								array('target' => '_blank')
+							);
+						?>
+					</li>
 					<li class="divider-vertical"></li>
 					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo __('Hello %s', AuthComponent::user('username')); ?> <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							<?php echo __d('awecms', 'Hello %s', AuthComponent::user('username')); ?>
+							<span class="caret"></span>
+						</a>
 						<ul class="dropdown-menu">
-							<li><?php echo $this->Html->link(__('Edit your profile'), '#'); ?></li>
-							<li><?php echo $this->Html->link(__('Logout'), array('admin' => false, 'plugin' => 'awecms', 'controller' => 'users', 'action' => 'logout')); ?></li>
+							<!--li><?php echo $this->Html->link(__d('awecms', 'Edit your profile'), '#'); ?></li-->
+							<li>
+								<?php
+									echo $this->Html->link(
+										__d('awecms', 'Logout'),
+										array(
+											'admin' => false,
+											'plugin' => 'awecms',
+											'controller' => 'users',
+											'action' => 'logout'
+										)
+									);
+								?>
+							</li>
 						</ul>
 					</li>
 				</ul>

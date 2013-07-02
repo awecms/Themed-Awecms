@@ -23,7 +23,14 @@
 				<?php
 					echo $this->Html->link(
 						__(Configure::read('Awecms.designCompany')),
-						array('admin' => true, 'plugin' => 'awecms', 'controller' => 'static_pages', 'action' => 'plugin_display', 'awecms', 'home'),
+						array(
+							'admin' => true,
+							'plugin' => 'awecms',
+							'controller' => 'static_pages',
+							'action' => 'plugin_display',
+							'awecms',
+							'home'
+						),
 						array('class' => 'brand')
 					);
 				?>
