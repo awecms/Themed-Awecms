@@ -109,12 +109,6 @@
 	echo $this->Html->script('Awecms.jquery-1.8.2.min');
 	echo $this->Html->script('Awecms.jquery-ui-1.9.0.custom.min');
 	echo $this->Html->script('bootstrap');
-	?>
-	<script type="text/javascript">
-	// baseUrl is Deprecated. Use APP instead.
-	var baseUrl = <?php echo json_encode($this->Html->url('/')); ?>;
-	</script>
-	<?php
 	echo $this->Html->script('Awecms.common');
 	echo $this->fetch('script');
 	?>
