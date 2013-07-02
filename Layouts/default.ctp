@@ -43,8 +43,7 @@
 						<?php
 							echo $this->Html->link(
 								__d('awecms', 'Help'),
-								'http://awecms.com/static/help',
-								array('target' => '_blank')
+								'http://awecms.com/static/help'
 							);
 						?>
 					</li>
