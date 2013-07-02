@@ -20,7 +20,13 @@
 	<header id="header" class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-				<?php echo $this->Html->link(__(Configure::read('Awecms.designCompany')), array('admin' => true, 'plugin' => 'awecms', 'controller' => 'pages', 'action' => 'display', 'home'), array('class' => 'brand')); ?>
+				<?php
+					echo $this->Html->link(
+						__(Configure::read('Awecms.designCompany')),
+						array('admin' => true, 'plugin' => 'awecms', 'controller' => 'static_pages', 'action' => 'plugin_display', 'awecms', 'home'),
+						array('class' => 'brand')
+					);
+				?>
 			</div>
 		</div>
 	</header>

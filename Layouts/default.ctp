@@ -20,7 +20,13 @@
 	<header id="header" class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-				<?php echo $this->Html->link(__(Configure::read('Awecms.designCompany')), array('admin' => true, 'plugin' => 'awecms', 'controller' => 'pages', 'action' => 'display', 'home'), array('class' => 'brand')); ?>
+				<?php
+					echo $this->Html->link(
+							__(Configure::read('Awecms.designCompany')),
+							array('admin' => true, 'plugin' => 'awecms', 'controller' => 'static_pages', 'action' => 'plugin_display', 'awecms', 'home'),
+							array('class' => 'brand')
+						);
+				?>
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" href="#"><span class="icon-arrow-down"></span></a>
 				<ul class="nav pull-right">
 					<li><?php echo $this->Html->link(__(Configure::read('Awecms.websiteName')), '/'); ?></li>
@@ -77,8 +83,6 @@
 	<script type="text/javascript">
 	// baseUrl is Deprecated. Use APP instead.
 	var baseUrl = <?php echo json_encode($this->Html->url('/')); ?>;
-	
-	var APP = <?php echo json_encode($appConfig); ?>;
 	</script>
 	<?php
 	echo $this->Html->script('Awecms.common');
