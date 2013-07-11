@@ -9,7 +9,7 @@
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('smoothness/jquery-ui-1.9.0.custom.min');
+		echo $this->Html->css('awecms/jquery-ui-1.10.3.custom.min');
 		echo $this->Html->css('main');
 
 		echo $this->fetch('meta');
@@ -106,9 +106,11 @@
 	<?php
 	echo $this->element('sql_dump');
 	
-	echo $this->Html->script('Awecms.jquery-1.8.2.min');
-	echo $this->Html->script('Awecms.jquery-ui-1.9.0.custom.min');
+	echo $this->Html->script('jquery-1.10.1.min');
+	echo $this->Html->script('jquery-ui-1.10.3.custom.min');
 	echo $this->Html->script('bootstrap');
+	echo $this->Html->script('Awecms.handlebars-1.0.0.min');
+	echo $this->Html->script('Awecms.handlebars-helpers');
 	echo $this->Html->script('Awecms.common');
 	echo $this->fetch('script');
 	?>
