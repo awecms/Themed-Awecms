@@ -6275,6 +6275,70 @@ input[type="submit"].btn.btn-mini {
   background-color: #fff;
   cursor: default;
 }
+.thumbnails {
+  margin-left: -20px;
+  list-style: none;
+  *zoom: 1;
+}
+.thumbnails:before,
+.thumbnails:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.thumbnails:after {
+  clear: both;
+}
+.thumbnails:before,
+.thumbnails:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.thumbnails:after {
+  clear: both;
+}
+.row-fluid .thumbnails {
+  margin-left: 0;
+}
+.thumbnails > li {
+  float: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.thumbnail {
+  display: block;
+  padding: 4px;
+  line-height: 20px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+a.thumbnail:hover,
+a.thumbnail:focus {
+  border-color: #777777;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+.thumbnail > img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #444444;
+}
 .pull-right {
   float: right;
 }
@@ -8172,6 +8236,15 @@ legend + .control-group {
 .form-horizontal .form-actions {
   padding-bottom: 0;
 }
+.radio,
+.checkbox {
+  padding-left: 0;
+}
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: none;
+  margin-left: 0;
+}
 /* Cake Bake Compatibility */
 .legacy#content {
   padding-top: 40px;
@@ -9305,4 +9378,70 @@ td.actions {
 }
 .uploader img {
   max-width: 200px;
+}
+.input.attributes i {
+  cursor: pointer;
+}
+.input.attributes .attr-list {
+  margin-top: 10px;
+}
+.input.attributes .attr-list > li {
+  display: block;
+  clear: both;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+}
+.input.attributes .attr-item {
+  display: inline-block;
+  border: 1px solid #777777;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.input.attributes .attr-name {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #777777;
+}
+.input.attributes .attr-values {
+  padding: 0 10px 10px 10px;
+}
+.input.attributes .attr-value {
+  padding-top: 10px;
+}
+.input.attributes .attr-values-add {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.input.images img {
+  max-width: 200px;
+}
+.input.images i {
+  cursor: pointer;
+}
+.input.images .images-list {
+  margin-top: 10px;
+}
+.input.images .images-list > li {
+  display: block;
+  clear: both;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+}
+.input.images .images-item {
+  display: inline-block;
+  border: 1px solid #777777;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.input.images .images-name {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #777777;
+}
+.input.images .images-link {
+  display: block;
+  padding: 10px;
+  text-align: center;
 }
