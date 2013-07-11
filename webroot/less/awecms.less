@@ -242,3 +242,88 @@ td.actions {
 .uploader img {
     max-width: 200px;
 }
+
+.input.attributes {
+	@halfGutter: @gridGutterWidth / 2;
+
+	i {
+		cursor: pointer;
+	}
+
+	.attr-list {
+		margin-top: @halfGutter;
+	}
+
+	.attr-list > li {
+		display: block;
+		clear: both;
+		margin-bottom: @halfGutter;
+		background-color: @white;
+	}
+
+	.attr-item {
+		display: inline-block;
+		border: 1px solid @grayLightish;
+		.border-radius(@baseBorderRadius);
+	}
+
+	.attr-name {
+		padding: @halfGutter;
+		color: @white;
+		background-color: @grayLightish;
+	}
+
+	.attr-values {
+		padding: 0 @halfGutter @halfGutter @halfGutter;
+	}
+
+	.attr-value {
+		padding-top: @halfGutter;
+	}
+
+	.attr-values-add {
+		margin-top: @halfGutter;
+		margin-left: @halfGutter;
+	}
+}
+
+.input.images {
+	img {
+		max-width: 200px;
+	}
+
+	@halfGutter: @gridGutterWidth / 2;
+
+	i {
+		cursor: pointer;
+	}
+
+	.images-list {
+		margin-top: @halfGutter;
+	}
+
+	.images-list > li {
+		display: block;
+		clear: both;
+		margin-bottom: @halfGutter;
+		background-color: @white;
+	}
+
+	.images-item {
+		display: inline-block;
+		border: 1px solid @grayLightish;
+		.border-radius(@baseBorderRadius);
+	}
+
+	.images-name {
+		padding: @halfGutter;
+		color: @white;
+		background-color: @grayLightish;
+	}
+	
+	.images-link {
+		display: block;
+		padding: @halfGutter;
+		text-align: center;
+	}
+}
